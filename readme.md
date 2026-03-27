@@ -6,7 +6,7 @@ Kullanıcılar konuşma videolarını sisteme yükleyerek, tüm metnin yazılı 
 
 ## 🚀 Özellikler
 
-- **Video Ses Dönüşümü:** Yüklenen video (MP4, MOV) üzerinden ses ayrıştırma işlemi \fmpeg\ kullanılarak otonom yapılır.
+- **Video Ses Dönüşümü:** Yüklenen video (MP4, MOV) üzerinden ses ayrıştırma işlemi \ffmpeg\ kullanılarak otonom yapılır.
 - **Yüksek Hızlı Transkript:** Groq Whisper-Large-V3 modeli ile saniyeler içerisinde hatasız Türkçe transkript.
 - **Kelime Dağılımı ve Frekans:** Llama-3.1-8b modeli kullanılarak, bağlaçlar dahil ekranda söylenen tüm kelimelerin büyük-küçük harf bağımsız şekilde analizi ve sayımı.
 - **Kurumsal Arayüz:** Next.js ve Tailwind CSS ile tamamen koyu lacivert tonlarda oluşturulmuş, Premium hissiyat yaşatan akıcı UI. (Framer Motion animasyonları ile destekli)
@@ -31,7 +31,7 @@ Projenin bilgisayarınızda veya sunucunuzda çalışabilmesi için aşağıdaki
 
 ### 1. Backend (Python/FastAPI) Kurulumu
 
-\\\ash
+\\\Bash
 cd backend
 # Gerekli kütüphaneleri yükleyin
 pip install -r requirements.txt
@@ -47,7 +47,7 @@ uvicorn main:app --reload
 
 Backend sunucusu çalışırken yeni bir terminal açın:
 
-\\\ash
+\\\Bash
 cd frontend
 # Paketleri yükleyin
 npm install
@@ -57,4 +57,4 @@ npm run dev
 \\\
 
 ## 📌 Kullanım Bilgileri
-Tarayıcınızdan \http://localhost:3000\ adresine gidin. Miting, toplantı veya konuşma videonuzu sürükleyip bırakın ve analizi başlatın. Gerekli işlemler tamamlandıktan sonra sonuçlar ekranınıza düşecektir.
+Tarayıcınızdan \http://localhost:3000\ adresine gidin. Konuşma videonuzu sürükleyip bırakın ve analizi başlatın. Gerekli işlemler tamamlandıktan sonra sonuçlar ekranınıza düşecektir.
