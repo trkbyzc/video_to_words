@@ -1,0 +1,1 @@
+FROM python:3.10-slim`n`nRUN apt-get update && \`n    apt-get install -y ffmpeg && \`n    apt-get clean && \`n    rm -rf /var/lib/apt/lists/*`n`nWORKDIR /app`n`nCOPY requirements.txt .`nRUN pip install --no-cache-dir -r requirements.txt`n`nCOPY . .`n`nEXPOSE 8000`n`nCMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
