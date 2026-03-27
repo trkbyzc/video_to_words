@@ -39,7 +39,7 @@ export default function Home() {
     formData.append("video", file);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://video-to-words.onrender.com";
       const res = await fetch(`${apiUrl}/api/analyze-video`, {
         method: "POST",
         body: formData,
